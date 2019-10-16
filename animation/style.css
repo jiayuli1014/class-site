@@ -1,0 +1,67 @@
+html{
+    background: lightgray;
+}
+
+.flex{
+    position: fixed;
+    width: 100%;
+        height:100%;
+    top: 0;
+    left: 0;
+    /*background: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle{
+    width: 25%;
+    height: 25%;
+    background:yellow;
+    border-radius: 50%;
+    animation: pulse 1s alternate infinite ease;
+}
+
+.square{
+    width: 25vh;
+    height: 25vh;
+    background: pink;
+    animation: spin 1s infinite linear;
+}
+
+.runner{
+    width: 300px;
+    height: 100px;
+    background:red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: runner 5s infinite ease;
+}
+.spin{
+    display: inline-block;
+    animation: spin 10s infinite linear;
+    position: fixed;
+    top:50%;
+}
+.spin:hover{
+    color:aqua;
+}
+
+@keyframes pulse {
+    0%{transform:scale(1);}
+    100%{transform: scale(1.5);
+    background: yellow;
+    transform: translateY(50px);}
+}
+
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(300deg;)}
+    
+    @keyframes runner{
+        0%{transform: translate(-300px);rotate(0deg);}
+        100%{transform: translateX(120vw)
+            rotate(360deg);}
+    }
+}
